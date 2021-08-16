@@ -1,0 +1,189 @@
+/* asigna letra crimson y alinea al centro los titulos */
+
+.titulo {
+  color: crimson;
+  text-align: center;
+  font-size: 40;
+  }
+
+
+/*  vuelve anaranjado y establece tamaño 30 a lo que luego sera la barra lateral. En esta entrega agregue imagen en cada item y estilo bold*/
+.lista {
+ 
+background-image: linear-gradient(to bottom right, red, yellow);
+width:250px;
+background-color: darkorange;
+/*KANGREBURGUER*/
+list-style-image: url('mini.jpg');
+text-decoration: none;
+font-size: 30px;
+font-weight: bold;
+align-self: left;
+
+}
+
+ul ul {
+	position: absolute;
+	display: none;
+}
+
+ul ul li {
+	display: block;
+	width: 100%;
+	border:none;
+	background-color: black;
+	color: white;
+
+}
+
+ul li:hover ul {
+	display: block;
+}
+
+/*  define letra zen loop y asigna tamaño 20*/
+.zen{
+  
+  font-family: 'Zen Loop';
+  
+}
+
+
+/*  define la imagen de fondo, la centra y define que no se repita*/
+body {
+  background-image: url('ristorante.jpg');
+  background-repeat:no-repeat;
+  background-position: center center;
+
+  display: flex;
+	height: 600px; 
+	flex-direction: row;
+     }
+
+section{
+  flex-direction: column;
+      }
+
+
+/*  asinga fondo negro al elemento, usado sobre todo en los titulos y parrafos*/
+.fondonegro{
+  background-color: black;
+           }
+
+/* define formato de texto */
+.productos{ 
+color: wheat;
+text-align: center;
+font-style: "zen loop";
+          }
+
+/* define formato de texto (tengo pendiente unificar esta regla y la anterior*/
+.parrafo{
+font-style: "zen loop";
+color: wheat;
+background-color: black;
+font-size: 30;
+         }
+
+/*Para alinear..*/         
+.centro{ 
+  align-self: center;
+   
+}
+
+/* ubico formulario de contacto */
+
+.formulario{
+  
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 0% 20% 0% 20%;
+    padding: 20px;
+}
+
+
+/*  alineo en columna lo que no es el menu lateral y le doy tres cuartos de espacio */
+#contenido{
+  justify-content: center;
+  flex-direction: column;
+	display: flex;
+	flex: 3;
+	margin-top: 20px;
+}
+
+
+hr {  
+  border: 5px inset;
+}
+
+
+
+
+
+/*Break point*/
+@media only screen and (max-width:700px){
+  .grilla{
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    } 
+
+    body{
+    display: flex;
+   
+    flex-direction: column;
+        }
+
+.formulario{
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 0% 20% 0% 20%;
+            }
+ .lista {
+  width:100%;
+        }  
+  .bannervid{
+    display: none;
+  }         
+                                          }
+  
+/*Break point*/
+  @media only screen and (max-width:500px){
+    .grilla{
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    }
+
+    body{
+      display: flex;
+      flex-direction: column;
+        }
+      }
+
+   .formulario{
+       grid-template-columns: 1fr ;
+       grid-template-rows: 1fr 1fr 1fr 1fr;
+       margin: 0% 20% 0% 20%;
+                }
+    
+
+img{
+  width: 200px;
+  height: 200px;
+
+  border-radius: 20%;
+  padding: 20px;
+
+     }
+
+.img:hover {
+   transform: scale(1.5) rotate(0.01deg);
+           }
+       /*zoom en titulo*/
+  .titulo:hover {
+ transform: scale(1.5) rotate(0.01deg);
+                  }
+
+.carousel{
+  align-self: center;
+}
+
